@@ -1,8 +1,10 @@
 package com.teste.projeto.controller;
 
 import com.teste.projeto.entity.Estoque;
+import com.teste.projeto.entity.Produto;
 import com.teste.projeto.repository.EstoqueRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,5 +23,9 @@ public class EstoqueController {
         return estoqueRepository.findAll();
     }
 
+    @RequestMapping(value = "/estoque", method = RequestMethod.POST)
+    public Estoque save(@RequestBody Estoque estoque) {
+        return estoqueRepository.save(estoque);
+    }
 
 }
