@@ -14,12 +14,12 @@ public class ProdutoController {
     @Autowired
     ProdutoRepository produtoRepository;
 
-    @RequestMapping(value = "/produto", method = RequestMethod.GET)
+    @RequestMapping(value = "/Produto", method = RequestMethod.GET)
     public List<Produto> findAll() {
         return produtoRepository.findAll();
     }
 
-    @RequestMapping(value = "/produto", method = RequestMethod.POST)
+    @RequestMapping(value = "/Produto", method = RequestMethod.POST)
     public Produto save(@RequestBody Produto produto) {
         return produtoRepository.save(produto);
     }

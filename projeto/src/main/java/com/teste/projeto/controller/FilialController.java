@@ -14,13 +14,18 @@ public class FilialController {
     @Autowired
     FilialRepository filialRepository;
 
-    @RequestMapping(value = "/filial", method = RequestMethod.GET)
+    @RequestMapping(value = "/Filial", method = RequestMethod.GET)
     public List<Filial> getAllFilial(){
         return filialRepository.findAll();
     }
 
-    @RequestMapping(value = "/filial", method = RequestMethod.POST)
+    @RequestMapping(value = "/Filial", method = RequestMethod.POST)
     public Filial save(@RequestBody Filial filial) {
         return filialRepository.save(filial);
+    }
+
+    @RequestMapping(value = "/Filial/{id}", method = RequestMethod.GET)
+    public Filial getFilialById (@PathVariable Long id) {
+        return filialRepository.getOne(id);
     }
 }
