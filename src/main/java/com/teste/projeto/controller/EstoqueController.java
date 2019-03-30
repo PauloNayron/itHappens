@@ -1,7 +1,7 @@
 package com.teste.projeto.controller;
 
-import com.teste.projeto.entity.Produto;
-import com.teste.projeto.repository.ProdutoRepository;
+import com.teste.projeto.entity.Estoque;
+import com.teste.projeto.repository.EstoqueRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -11,14 +11,14 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api")
-public class ProdutoController {
+public class EstoqueController {
 
     @Autowired
-    ProdutoRepository produtoRepository;
+    EstoqueRepository estoqueRepository;
 
-    @RequestMapping(value = "/produto", method = RequestMethod.GET)
-    public List<Produto> findAll() {
-        return produtoRepository.findAll();
+    @RequestMapping(value = "/estoque", method = RequestMethod.GET)
+    public List<Estoque> getAllEstoque() {
+        return estoqueRepository.findAll();
     }
 
 
