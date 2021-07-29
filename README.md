@@ -1,4 +1,4 @@
-# Seletivo it Happens
+# it Happens
 data: 30 de março de 2019, Desenvolvido em: Java
 
 ## Tecnologias e ferramentas utilizadas:
